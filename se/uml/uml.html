@@ -1,0 +1,354 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>UML</title>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="4a5i8ft11o4on7a5b3od3gemn7">UML</a>
+</h1>
+<div align="center" class="globalOverview">
+<img src="index_files/images/UML 4.jpg"></div>
+<h2 class="topic">
+<a name="5fh6t4efhp56ma8g2m6p9c0n7l">图(diagrams)</a>
+</h2>
+<p class="labelsAndMarkers">
+<img class="marker" src="index_files/images/priority_3 3.png"></p>
+<p class="relationships">参见: <a href="#3gkig43oqb1tjdi9hvt19hjja8">描述UML的[模型]</a>
+</p>
+<h3 class="topic">
+<a name="6geou5q7ca268jgpu0jkehpi5s">&nbsp;用例图(use case diagram)</a>
+</h3>
+<p class="labelsAndMarkers">
+<img class="marker" src="index_files/images/priority_1 3.png"></p>
+<div class="notesContainer">
+<p>用例图展现了一组用例、参与者以及它们间的关系。</p>
+<p>小人形状表示参与者</p>
+<p>椭圆形状表示用例</p>
+<p>用例图用于需求建模。</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="72mu00iguvmr0vrs5c6ao3ig7h">&nbsp;类图(class diagram)</a>
+</h3>
+<div class="notesContainer">
+<p>类图展示了一组类、接口和协作及它们间的关系。用类图说明系统的静态视图。一般在高层给出类的主要职责，在低层给出类的属性和操作。</p>
+<p>人民币账户类和美元账户类从账户类继承</p>
+<p>账户与ATM相关联</p>
+<p> 用户与两种账户类相关联</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="070vajup8tfp8niugir23o08kr">&nbsp;对象图(object diagram)</a>
+</h3>
+<div class="notesContainer">
+<p>对象图展示了一组对象及它们间的关系，表达了系统的静态设计视图或静态过程视图，除了现实和原型方面的因素外，它与类图作用是相同的。</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="3241qq734h15sd5qbov61hteqb">&nbsp;组件图(component diagram)</a>
+</h3>
+<div class="notesContainer">
+<p>组件图，又称构件图，它由组件、接口和组件之间的联系构成。</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="03ojd6137cib0qkae6kb5578t6">&nbsp;配置图(deployment diagram)</a>
+</h3>
+<div class="notesContainer">
+<p>配置图展现了对运行时处理节点以及其中组件的配署。它描述系统硬件的物理拓扑结构，以及在此结构上执行的软件执行情况</p>
+<p>图中有3个处理机与和两个设备，相互之间是关联的关系。</p>
+<p></p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="0uv2n0eis1h84iufupp2tauad8">&nbsp;时序图(sequence diagram)</a>
+</h3>
+<div class="notesContainer">
+<p>时序图显示多个对象之间的动态协作，重点是显示对象之间发送的消息的时间顺序。</p>
+<p>用户把卡插入ATM中</p>
+<p>ATM向用户发出需要密码指令</p>
+<p>用户再把密码提供给ATM</p>
+<p>&hellip;&hellip;</p>
+<p>时序图和协作图都属于交互图</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="7a41k05mq8hoo9rvmgpcf8ais5">&nbsp;协作图(collaboration diagram)</a>
+</h3>
+<div class="notesContainer">
+<p>协作图描述对象和对象间的交互，强调对象的结构组织。它强调收发消息对象的组织结构，按组织结构对控制流建模。除了显示消息的交互之外，它还显示对象以及它们之间的关系。</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="6c6bbkjisjojdgc13bnmeeql22">&nbsp;状态图(state diagram)</a>
+</h3>
+<div class="notesContainer">
+<p>状态图展示了一个特定对象的所有可能状态以及由于各种事件的发生而引起的状态间的转移。用状态图说明系统的动态视图。</p>
+<p>开始状态和结束状态</p>
+<p>从开始状态进入插入卡状态，经过输入密码操作，进入等待密码验证状态，然后进行密码验证，之后进入密码验证成功状态，再进行其他工作，最后工作完成取卡，进入到状态结束。</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="7lpvusq0q741cn1rtn7f5d89tk">&nbsp;活动图(activity diagram)</a>
+</h3>
+<p class="labelsAndMarkers">
+<img class="marker" src="index_files/images/priority_2 3.png"></p>
+<div class="notesContainer">
+<p>活动图是状态图的一个变体，显示了系统中从一个活动到另一个活动的流程。</p>
+<p>开始状态和结束状态。</p>
+<p>活动图以活动作为节点，从开始状态起步，进行插入卡活动，然后输入密码，系统验证密码，并进行其他工作，最后用户取卡，接着活动结束。</p>
+<p></p>
+</div>
+<h2 class="topic">
+<a name="70bj2rmk9napca8o41637eqmf2">关系(relationships)</a>
+</h2>
+<p class="labelsAndMarkers">
+<img class="marker" src="index_files/images/priority_2 3.png"></p>
+<p class="relationships">参见: <a href="#3gkig43oqb1tjdi9hvt19hjja8">描述UML的[模型]</a>
+</p>
+<h3 class="topic">
+<a name="2eebslihdg7nr0pmbllermvg7i">&nbsp;关联关系（Association）</a>
+</h3>
+<div class="notesContainer">
+<p>	关联关系是一种结构化的关系，指一种对象和另一种对象有联系。给定关联的两个类，可以从其中的一个类的对象访问到另一个类的相关对象。在UML图中，关联关系用一条实线表示如下图所示。</p>
+<p>	关联可以有方向，表示该关联在某方向被使用。只在一个方向上存在的关联，称作单向关联（Unidirectional Association），在两个方向上都存在的关联，称作双向关联（Bidirectional Association）。</p>
+<p></p>
+</div>
+<p class="relationships">参见: <a href="#6vb6ul0q8fkd2hgephrsn11a5o"></a>
+</p>
+<h3 class="topic">
+<a name="6vb6ul0q8fkd2hgephrsn11a5o">&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="51" src="index_files/5iitgttagh7cdtn09khcu05eu5 4.png" width="212"></p>
+<p class="relationships">参见: <a href="#2eebslihdg7nr0pmbllermvg7i">关联关系（Association）</a>
+</p>
+<h3 class="topic">
+<a name="3rm8js1br98k9l235k7ej58nnu">&nbsp;依赖关系（Dependency）</a>
+</h3>
+<div class="notesContainer">
+<p>对于两个对象X、Y，如果对象X发生变化，可能会引起对另一个对象Y的变化，则称Y依赖于X。在UML图中，依赖关系用一条带有箭头的虚线来表示。</p>
+<p></p>
+</div>
+<p class="relationships">参见: <a href="#5m2albqj6htdhqi662edtoj8t9"></a>
+</p>
+<h3 class="topic">
+<a name="5m2albqj6htdhqi662edtoj8t9">&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="63" src="index_files/4t69c08uihvfvbqf2dk5hf4mn8 4.png" width="136"></p>
+<p class="relationships">参见: <a href="#3rm8js1br98k9l235k7ej58nnu">依赖关系（Dependency）</a>
+</p>
+<h3 class="topic">
+<a name="58m8mjiporlvu9mbj6g1rf10qm">&nbsp;泛化关系（Generalization）</a>
+</h3>
+<div class="notesContainer">
+<p>UML中的泛化关系定义了一般元素和特殊元素之间的分类关系，与和C++及Java中的继承关系有些类似。在UML图中，泛化关系用一条带有空心箭头的实线来表示。 </p>
+<p></p>
+</div>
+<p class="relationships">参见: <a href="#3f8mdspqcuc4ug30nn7s2110jn"></a>
+</p>
+<h3 class="topic">
+<a name="3f8mdspqcuc4ug30nn7s2110jn">&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="48" src="index_files/21ecc2pns38mecd631fkn7kepq 4.png" width="190"></p>
+<p class="relationships">参见: <a href="#58m8mjiporlvu9mbj6g1rf10qm">泛化关系（Generalization）</a>
+</p>
+<h3 class="topic">
+<a name="6qtv1nf69gbmcksja58bh87h3r">&nbsp;实现关系（Realization）</a>
+</h3>
+<div class="notesContainer">
+<p>实现关系将一种模型元素（如类）与另一种模型元素（如接口）连接起来</p>
+<p></p>
+</div>
+<p class="relationships">参见: <a href="#0ifkc7p56sn99c2gngetl9ch92"></a>
+</p>
+<h3 class="topic">
+<a name="0ifkc7p56sn99c2gngetl9ch92">&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="51" src="index_files/174gqeks50od86karvfur60ao0 4.png" width="160"></p>
+<p class="relationships">参见: <a href="#6qtv1nf69gbmcksja58bh87h3r">实现关系（Realization）</a>
+</p>
+<h2 class="topic">
+<a name="2tm8qmu9pc5pfh0h145004ivsi">事物(things)</a>
+</h2>
+<p class="labelsAndMarkers">
+<img class="marker" src="index_files/images/priority_1 3.png"></p>
+<p class="relationships">参见: <a href="#3gkig43oqb1tjdi9hvt19hjja8">描述UML的[模型]</a>
+</p>
+<h3 class="topic">
+<a name="4bffel2is0ekg8ag72vcl4sapm">&nbsp;结构事物</a>
+</h3>
+<h3 class="topic">
+<a name="2mc9h1dvegc4ldc3p9mkllh6hm">&nbsp;&nbsp;类(class)</a>
+</h3>
+<p class="relationships">参见: <a href="#2009uaicl3lkteh31rcksnoaul"></a>
+</p>
+<h3 class="topic">
+<a name="2009uaicl3lkteh31rcksnoaul">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="38" src="index_files/71polpii4o0eusmfo41ic024s6 2.png" width="89"></p>
+<p class="relationships">参见: <a href="#2mc9h1dvegc4ldc3p9mkllh6hm">类(class)</a>
+</p>
+<h3 class="topic">
+<a name="3ecvsbbplj5rf252flv8mqm07h">&nbsp;&nbsp;接口(interface)</a>
+</h3>
+<p class="relationships">参见: <a href="#2oh0h7n1guja7sphcan3s6t48a"></a>
+</p>
+<h3 class="topic">
+<a name="2oh0h7n1guja7sphcan3s6t48a">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="62" src="index_files/0v961v1j2etur0gbgh424da2ua 2.png" width="59"></p>
+<p class="relationships">参见: <a href="#3ecvsbbplj5rf252flv8mqm07h">接口(interface)</a>
+</p>
+<h3 class="topic">
+<a name="7f8poib0ph63613i2gi3pqh90c">&nbsp;&nbsp;协作(collaboration)</a>
+</h3>
+<p class="relationships">参见: <a href="#0ha6qa1qe4ii2lrvou4pvnr6nj"></a>
+</p>
+<h3 class="topic">
+<a name="0ha6qa1qe4ii2lrvou4pvnr6nj">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="50" src="index_files/2smtcq1edqgqkb30e01enpu9ep 2.png" width="78"></p>
+<p class="relationships">参见: <a href="#7f8poib0ph63613i2gi3pqh90c">协作(collaboration)</a>
+</p>
+<h3 class="topic">
+<a name="1dhi96n68h0qg8c9vc1pn6jgi6">&nbsp;&nbsp;用例(use case)</a>
+</h3>
+<p class="relationships">参见: <a href="#47p3hf13ef16q2gofjc0u1vdpt"></a>
+</p>
+<h3 class="topic">
+<a name="47p3hf13ef16q2gofjc0u1vdpt">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="52" src="index_files/4922ffcrrtgsdngnv8mg5tjl5j 2.png" width="120"></p>
+<p class="relationships">参见: <a href="#1dhi96n68h0qg8c9vc1pn6jgi6">用例(use case)</a>
+</p>
+<h3 class="topic">
+<a name="13uedc7b5kg3rcqadtku8r7bc1">&nbsp;&nbsp;活动类(active class)</a>
+</h3>
+<p class="relationships">参见: <a href="#1avjc9eh9vrr0jkued2konim1l"></a>
+</p>
+<h3 class="topic">
+<a name="1avjc9eh9vrr0jkued2konim1l">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="49" src="index_files/3ar0uj02ddjjnn03kvdoc1fun5 2.png" width="79"></p>
+<p class="relationships">参见: <a href="#13uedc7b5kg3rcqadtku8r7bc1">活动类(active class)</a>
+</p>
+<h3 class="topic">
+<a name="2nmie9ob6gmvod7d2j6b8tseb0">&nbsp;&nbsp;组件(component)</a>
+</h3>
+<p class="relationships">参见: <a href="#1alsfqmhnhh9j4fio9998rog20"></a>
+</p>
+<h3 class="topic">
+<a name="1alsfqmhnhh9j4fio9998rog20">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="52" src="index_files/61dri6nbeu3n2d1la900up092c 2.png" width="109"></p>
+<p class="relationships">参见: <a href="#2nmie9ob6gmvod7d2j6b8tseb0">组件(component)</a>
+</p>
+<h3 class="topic">
+<a name="54pgagrqj26gc8uvtm8crh6hq5">&nbsp;&nbsp;节点(node)</a>
+</h3>
+<p class="relationships">参见: <a href="#30ugm7mnlot6t3h46mgf76jdv0"></a>
+</p>
+<h3 class="topic">
+<a name="30ugm7mnlot6t3h46mgf76jdv0">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="50" src="index_files/5alguhq9820iqvcsklre4v64sc 2.png" width="63"></p>
+<p class="relationships">参见: <a href="#54pgagrqj26gc8uvtm8crh6hq5">节点(node)</a>
+</p>
+<h3 class="topic">
+<a name="2eonasifidu1rm41pr84kkjlsk">&nbsp;行为事物</a>
+</h3>
+<h3 class="topic">
+<a name="1qgr1evid3bq9qur4ndco3jb1j">&nbsp;&nbsp;交互(interaction)</a>
+</h3>
+<p class="relationships">参见: <a href="#7h130krf6btnr2kgqbmunbt5su"></a>
+</p>
+<h3 class="topic">
+<a name="7h130krf6btnr2kgqbmunbt5su">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="63" src="index_files/5rvupq7v8ru1f7efq40bejejqv 2.png" width="201"></p>
+<p class="relationships">参见: <a href="#1qgr1evid3bq9qur4ndco3jb1j">交互(interaction)</a>
+</p>
+<h3 class="topic">
+<a name="781kglfdd79sfn4qt0gag94bq1">&nbsp;&nbsp;状态机(state machine)</a>
+</h3>
+<p class="relationships">参见: <a href="#1m71dgre6n5ovkdvq56rtn3rt2"></a>
+</p>
+<h3 class="topic">
+<a name="1m71dgre6n5ovkdvq56rtn3rt2">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="44" src="index_files/6q36n7vtbvp9jbupaeicr9uoab 2.png" width="76"></p>
+<p class="relationships">参见: <a href="#781kglfdd79sfn4qt0gag94bq1">状态机(state machine)</a>
+</p>
+<h3 class="topic">
+<a name="1go4hf60qdqc45ua7roebo3pvr">&nbsp;组织事物</a>
+</h3>
+<h3 class="topic">
+<a name="1brl559u38ufmffqni2ocbs75e">&nbsp;&nbsp;包(package)</a>
+</h3>
+<p class="relationships">参见: <a href="#3379h5foptdcqn179fi1tmls1t"></a>
+</p>
+<h3 class="topic">
+<a name="3379h5foptdcqn179fi1tmls1t">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="60" src="index_files/5fk3g5uv3vrcvpbl1i3e9g829d 2.png" width="69"></p>
+<p class="relationships">参见: <a href="#1brl559u38ufmffqni2ocbs75e">包(package)</a>
+</p>
+<h3 class="topic">
+<a name="3kom7j92uckdiusah13pn7v1cd">&nbsp;辅助事物</a>
+</h3>
+<h3 class="topic">
+<a name="2esr3cknqhuboqum0mt9vsdo9q">&nbsp;&nbsp;注释(annotation)</a>
+</h3>
+<p class="relationships">参见: <a href="#6flgdm88p3apodfogmtpoib5p2"></a>
+</p>
+<h3 class="topic">
+<a name="6flgdm88p3apodfogmtpoib5p2">&nbsp;&nbsp;&nbsp;</a>
+</h3>
+<p class="topicImage">
+<img height="43" src="index_files/3ef00qn73flbncg3vhoebi3aso 2.png" width="95"></p>
+<p class="relationships">参见: <a href="#2esr3cknqhuboqum0mt9vsdo9q">注释(annotation)</a>
+</p>
+<h2 class="topic">
+<a name="3gkig43oqb1tjdi9hvt19hjja8">描述UML的[模型]</a>
+</h2>
+<p class="relationships">参见: <a href="#2tm8qmu9pc5pfh0h145004ivsi">事物(things)</a>, <a href="#5fh6t4efhp56ma8g2m6p9c0n7l">图(diagrams)</a>, <a href="#70bj2rmk9napca8o41637eqmf2">关系(relationships)</a>
+</p>
+<h2 class="topic">
+<a name="6qcep4f7k64ujf6rd6bog5lehl"></a>
+</h2>
+<p class="topicImage">
+<img src="index_files/0b5989gu24iko908kn0ajs40ue.png"></p>
+<h2 class="topic">
+<a name="0gdnqub59i88k3hpir3l6pv6u5">terminology</a>
+</h2>
+<h3 class="topic">
+<a name="5qt1me13b4d51fm75ddo1drssu">&nbsp;模型</a>
+</h3>
+<h3 class="topic">
+<a name="52ne1hhkajp4i1md7bck4gc2ha">&nbsp;&nbsp;代表要开发的软件的一个或者多个方面的UML图</a>
+</h3>
+<h3 class="topic">
+<a name="0fg9bcuq0tuneju79bepempc74">&nbsp;用例</a>
+</h3>
+<h3 class="topic">
+<a name="1khugcg0moo8db57n45semq2oa">&nbsp;&nbsp;软件产品本身和软件产品的使用者（参与者）之间的交互建立模型</a>
+</h3>
+</body>
+</html>

@@ -1,0 +1,516 @@
+/*==============================================================*/
+/* DBMS name:      Microsoft SQL Server 2008                    */
+/* Created on:     2014/10/7 13:34:39                           */
+/*==============================================================*/
+
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('books') and o.name = 'FK_BOOKS_CONTAIN_BOOKTYPE')
+alter table books
+   drop constraint FK_BOOKS_CONTAIN_BOOKTYPE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('buy') and o.name = 'FK_BUY_REFERENCE_ORDER')
+alter table buy
+   drop constraint FK_BUY_REFERENCE_ORDER
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('buy') and o.name = 'FK_BUY_BUY_USERS')
+alter table buy
+   drop constraint FK_BUY_BUY_USERS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('buy') and o.name = 'FK_BUY_BUY2_BOOKS')
+alter table buy
+   drop constraint FK_BUY_BUY2_BOOKS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('"order"') and o.name = 'FK_ORDER_HAVE_USERS')
+alter table "order"
+   drop constraint FK_ORDER_HAVE_USERS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('predom') and o.name = 'FK_PREDOM_PREDOM_USERGROU')
+alter table predom
+   drop constraint FK_PREDOM_PREDOM_USERGROU
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('predom') and o.name = 'FK_PREDOM_PREDOM2_FUNCTION')
+alter table predom
+   drop constraint FK_PREDOM_PREDOM2_FUNCTION
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('review') and o.name = 'FK_REVIEW_REVIEW_USERS')
+alter table review
+   drop constraint FK_REVIEW_REVIEW_USERS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('review') and o.name = 'FK_REVIEW_REVIEW2_BOOKS')
+alter table review
+   drop constraint FK_REVIEW_REVIEW2_BOOKS
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('users') and o.name = 'FK_USERS_BELONG_USERGROU')
+alter table users
+   drop constraint FK_USERS_BELONG_USERGROU
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('books')
+            and   name  = 'contain_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index books.contain_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('books')
+            and   type = 'U')
+   drop table books
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('booktypes')
+            and   type = 'U')
+   drop table booktypes
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('buy')
+            and   name  = 'buy2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index buy.buy2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('buy')
+            and   name  = 'buy_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index buy.buy_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('buy')
+            and   type = 'U')
+   drop table buy
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('functions')
+            and   name  = 'name_UQ'
+            and   indid > 0
+            and   indid < 255)
+   drop index functions.name_UQ
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('functions')
+            and   type = 'U')
+   drop table functions
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('"order"')
+            and   name  = 'have_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index "order".have_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('"order"')
+            and   type = 'U')
+   drop table "order"
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('predom')
+            and   name  = 'predom2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index predom.predom2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('predom')
+            and   name  = 'predom_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index predom.predom_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('predom')
+            and   type = 'U')
+   drop table predom
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('review')
+            and   name  = 'review2_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index review.review2_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('review')
+            and   name  = 'review_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index review.review_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('review')
+            and   type = 'U')
+   drop table review
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('userGroups')
+            and   name  = 'name_UQ'
+            and   indid > 0
+            and   indid < 255)
+   drop index userGroups.name_UQ
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('userGroups')
+            and   type = 'U')
+   drop table userGroups
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('users')
+            and   name  = 'email_UQ'
+            and   indid > 0
+            and   indid < 255)
+   drop index users.email_UQ
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('users')
+            and   name  = 'belong_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index users.belong_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('users')
+            and   type = 'U')
+   drop table users
+go
+
+/*==============================================================*/
+/* Table: books                                                 */
+/*==============================================================*/
+create table books (
+   books_id             int                  not null,
+   booktypes_id         int                  null,
+   books_ISBN           char(13)             not null,
+   books_name           varchar(40)          not null,
+   books_author         varchar(40)          not null,
+   books_publisher      varchar(40)          not null,
+   books_price          float(4)             not null,
+   books_image          varchar(20)          not null,
+   constraint PK_BOOKS primary key nonclustered (books_id)
+)
+go
+
+/*==============================================================*/
+/* Index: contain_FK                                            */
+/*==============================================================*/
+create index contain_FK on books (
+booktypes_id ASC
+)
+go
+
+/*==============================================================*/
+/* Table: booktypes                                             */
+/*==============================================================*/
+create table booktypes (
+   booktypes_id         int                  not null,
+   booktypes_name       varchar(20)          not null,
+   constraint PK_BOOKTYPES primary key nonclustered (booktypes_id)
+)
+go
+
+/*==============================================================*/
+/* Table: buy                                                   */
+/*==============================================================*/
+create table buy (
+   buy_id               int                  not null,
+   users_id1            int                  not null,
+   books_id             int                  not null,
+   orders_id            int                  null,
+   buy_amount           int                  not null,
+   constraint PK_BUY primary key (buy_id)
+)
+go
+
+/*==============================================================*/
+/* Index: buy_FK                                                */
+/*==============================================================*/
+create index buy_FK on buy (
+users_id1 ASC
+)
+go
+
+/*==============================================================*/
+/* Index: buy2_FK                                               */
+/*==============================================================*/
+create index buy2_FK on buy (
+books_id ASC
+)
+go
+
+/*==============================================================*/
+/* Table: functions                                             */
+/*==============================================================*/
+create table functions (
+   fucntions_id         int                  identity,
+   functions_name       varchar(100)         not null,
+   functions_note       varchar(100)         null,
+   constraint PK_FUNCTIONS primary key nonclustered (fucntions_id)
+)
+go
+
+/*==============================================================*/
+/* Index: name_UQ                                               */
+/*==============================================================*/
+create unique index name_UQ on functions (
+functions_name ASC
+)
+go
+
+/*==============================================================*/
+/* Table: "order"                                               */
+/*==============================================================*/
+create table "order" (
+   orders_id            int                  identity,
+   users_id1            int                  null,
+   orders_date          char(10)             not null,
+   orders_totalPrice    float                not null,
+   constraint PK_ORDER primary key nonclustered (orders_id)
+)
+go
+
+/*==============================================================*/
+/* Index: have_FK                                               */
+/*==============================================================*/
+create index have_FK on "order" (
+users_id1 ASC
+)
+go
+
+/*==============================================================*/
+/* Table: predom                                                */
+/*==============================================================*/
+create table predom (
+   predom_id            int                  identity,
+   userGroups_id        int                  not null,
+   fucntions_id         int                  not null,
+   constraint PK_PREDOM primary key (predom_id)
+)
+go
+
+/*==============================================================*/
+/* Index: predom_FK                                             */
+/*==============================================================*/
+create index predom_FK on predom (
+userGroups_id ASC
+)
+go
+
+/*==============================================================*/
+/* Index: predom2_FK                                            */
+/*==============================================================*/
+create index predom2_FK on predom (
+fucntions_id ASC
+)
+go
+
+/*==============================================================*/
+/* Table: review                                                */
+/*==============================================================*/
+create table review (
+   preview_id           int                  not null,
+   users_id1            int                  not null,
+   books_id             int                  not null,
+   preview_note         varchar(100)         not null,
+   constraint PK_REVIEW primary key (preview_id)
+)
+go
+
+/*==============================================================*/
+/* Index: review_FK                                             */
+/*==============================================================*/
+create index review_FK on review (
+users_id1 ASC
+)
+go
+
+/*==============================================================*/
+/* Index: review2_FK                                            */
+/*==============================================================*/
+create index review2_FK on review (
+books_id ASC
+)
+go
+
+/*==============================================================*/
+/* Table: userGroups                                            */
+/*==============================================================*/
+create table userGroups (
+   userGroups_id        int                  identity,
+   userGroups_name      varchar(20)          not null,
+   userGroups_note      varchar(100)         null,
+   constraint PK_USERGROUPS primary key nonclustered (userGroups_id)
+)
+go
+
+/*==============================================================*/
+/* Index: name_UQ                                               */
+/*==============================================================*/
+create unique index name_UQ on userGroups (
+userGroups_name ASC
+)
+go
+
+/*==============================================================*/
+/* Table: users                                                 */
+/*==============================================================*/
+create table users (
+   users_id             int                  identity,
+   userGroups_id        int                  null,
+   users_name           varchar(10)          not null,
+   users_sex            char(2)              not null,
+   users_address        varchar(100)         not null,
+   users_postcode       char(6)              not null,
+   usesr_telPhone       char(11)             not null,
+   users_eMail          varchar(40)          not null,
+   users_password       varchar(20)          not null,
+   constraint PK_USERS primary key nonclustered (users_id)
+)
+go
+
+/*==============================================================*/
+/* Index: belong_FK                                             */
+/*==============================================================*/
+create index belong_FK on users (
+userGroups_id ASC
+)
+go
+
+/*==============================================================*/
+/* Index: email_UQ                                              */
+/*==============================================================*/
+create unique index email_UQ on users (
+users_eMail ASC
+)
+go
+
+alter table books
+   add constraint FK_BOOKS_CONTAIN_BOOKTYPE foreign key (booktypes_id)
+      references booktypes (booktypes_id)
+         on update cascade on delete cascade
+go
+
+alter table buy
+   add constraint FK_BUY_REFERENCE_ORDER foreign key (orders_id)
+      references "order" (orders_id)
+         on update cascade on delete cascade
+go
+
+alter table buy
+   add constraint FK_BUY_BUY_USERS foreign key (users_id1)
+      references users (users_id)
+         on update cascade on delete cascade
+go
+
+alter table buy
+   add constraint FK_BUY_BUY2_BOOKS foreign key (books_id)
+      references books (books_id)
+         on update cascade on delete cascade
+go
+
+alter table "order"
+   add constraint FK_ORDER_HAVE_USERS foreign key (users_id1)
+      references users (users_id)
+         on update cascade on delete cascade
+go
+
+alter table predom
+   add constraint FK_PREDOM_PREDOM_USERGROU foreign key (userGroups_id)
+      references userGroups (userGroups_id)
+         on update cascade on delete cascade
+go
+
+alter table predom
+   add constraint FK_PREDOM_PREDOM2_FUNCTION foreign key (fucntions_id)
+      references functions (fucntions_id)
+         on update cascade on delete cascade
+go
+
+alter table review
+   add constraint FK_REVIEW_REVIEW_USERS foreign key (users_id1)
+      references users (users_id)
+         on update cascade on delete cascade
+go
+
+alter table review
+   add constraint FK_REVIEW_REVIEW2_BOOKS foreign key (books_id)
+      references books (books_id)
+         on update cascade on delete cascade
+go
+
+alter table users
+   add constraint FK_USERS_BELONG_USERGROU foreign key (userGroups_id)
+      references userGroups (userGroups_id)
+         on update cascade on delete cascade
+go
+

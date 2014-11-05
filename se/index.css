@@ -1,0 +1,9 @@
+#footer {
+    margin: 0 auto;
+    text-align: center;
+    z-index: -10000;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}

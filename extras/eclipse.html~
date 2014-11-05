@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {
+            margin: 0 auto;
+        }
+
+        .tags {
+            width: 140px;
+        }
+
+        .tags span {
+            font-size: 11px;
+            color: #6E724E;
+            padding: 2px 5px;
+            border: 1px solid #D7D999;
+            background: #FFFFC6;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .tags span:hover, .tags span.selected {
+            border: 1px solid #75784C;
+            background: #FF7;
+            color: #333521;
+        }
+
+        body, table {
+            font-size: 12px;
+        }
+
+        table {
+            table-layout: fixed;
+            empty-cells: show;
+            border-collapse: collapse;
+            margin: 0 auto;
+        }
+
+        td {
+            height: 20px;
+        }
+
+        h1, h2, h3 {
+            font-size: 12px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            background: #FFF;
+            border: 1px solid #9DB3C5;
+            padding: 1px;
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .title h1 {
+            line-height: 31px;
+            text-align: center;
+            background: #2F589C url(th_bg2.gif);
+            background-repeat: repeat-x;
+            background-position: 0 0;
+            color: #FFF;
+        }
+
+        .title th, .title td {
+            border: 1px solid #CAD9EA;
+            padding: 5px;
+        }
+
+        /*这个是借鉴一个论坛的样式*/
+        table.t1 {
+            border: 1px solid #cad9ea;
+            color: #666;
+        }
+
+        table.t1 th {
+            background-image: url(th_bg1.gif);
+            background-repeat:: repeat-x;
+            height: 30px;
+        }
+
+        table.t1 td, table.t1 th {
+            border: 1px solid #cad9ea;
+            padding: 0 1em 0;
+        }
+
+        table.t1 tr.a1 {
+            background-color: #f5fafe;
+        }
+
+        table.t2 {
+            border: 1px solid #9db3c5;
+            color: #666;
+        }
+
+        table.t2 th {
+            background-image: url(th_bg2.gif);
+            background-repeat:: repeat-x;
+            height: 30px;
+            color: #000;
+        }
+
+        table.t2 td {
+            border: 1px dotted #cad9ea;
+            padding: 0 2px 0;
+        }
+
+        table.t2 th {
+            border: 1px solid #a7d1fd;
+            padding: 0 2px 0;
+        }
+
+        table.t2 tr.a1 {
+            background-color: #e8f3fd;
+        }
+
+        table.t3 {
+            border: 1px solid #fc58a6;
+            color: #720337;
+        }
+
+        table.t3 th {
+            background-image: url(th_bg3.gif);
+            background-repeat:: repeat-x;
+            height: 30px;
+            color: #35031b;
+        }
+
+        table.t3 td {
+            border: 1px dashed #feb8d9;
+            padding: 0 1.5em 0;
+        }
+
+        table.t3 th {
+            border: 1px solid #b9f9dc;
+            padding: 0 2px 0;
+        }
+
+        table.t3 tr.a1 {
+            background-color: #fbd8e8;
+        }
+        .red
+        {
+            color:red;
+        }
+        .bg
+        {
+            background-color:#feb8d9;
+        }
+        .footer {
+            margin: 0 auto;
+            position: absolute;
+            text-align: center;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        function ApplyStyle(s) {
+            document.getElementById("mytab").className = s.innerText;
+        }
+        window.onload=function(){
+           var trs = document.getElementsByClassName("a1");
+            for(var i in trs)
+            {
+                var tds  = trs[i].children;
+                for(var j in tds)
+                {
+                    if(tds[j].innerHTML == 'N')
+                    {
+                        tds[j-1].className = 'bg';
+                        tds[j].className = 'bg';
+                        tds[j].style.color = 'red';
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<div class="title">
+    <h1>我的Eclipse快捷键</h1>
+    <table>
+        <tr>
+            <td><a href="../index.html">&lt;&lt;主页</a></td>
+            <td><a href="index.html">&lt;&lt;返回</a></td>
+            <td>
+                点击链接切换样式：<a href="javascript:;" onclick="ApplyStyle(this)">t1</a>
+                <a href="javascript:;" onclick="ApplyStyle(this)">t2</a>
+                <a href="javascript:;" onclick="ApplyStyle(this)">t3</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<table id="mytab"  border="1" class="t1" width="50%">
+    <thead>
+    <th width="32%">键</th>
+    <th>描述</th>
+    <th width="10%">Remembered</th>
+    <th>备注</th>
+    </thead>
+    <tbody>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Alt+R</span></td>
+        <td>全局<font color="red"> 重命名</font></td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+2,R</span></td>
+        <td>本java文件<font color="red"> 重命名</font></td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+2,L</span></td>
+        <td>快速创建对象名</td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Alt+L</span></td>
+        <td>快速创建局部变量</td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Alt+I</span></td>
+        <td>内联</td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+H</span></td>
+        <td>文件搜索</td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Alt+H</span></td>
+        <td>Open Method Invoke(打开方法调用)</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Shift+T</span></td>
+        <td>Open Type(打开类型)</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+O</span></td>
+        <td>快速查找方法</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Alt+Q,Q</span></td>
+        <td>打开视图</td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+PageUp,Ctrl+PageDown</span></td>
+        <td>切换选项卡</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+E</span></td>
+        <td>多选项卡间选择切换</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Shift+M</span></td>
+        <td>提取方法</td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+T</span></td>
+        <td>查看继承</td>
+        <td>Y</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Shift+Enter,Shift+Ctrl+Enter</span></td>
+        <td>创建一个空白行</td>
+        <td>N</td>
+        <td>与光标是否在行末无关。</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+B</span></td>
+        <td>添加书签</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+       <tr class="a1">
+        <td class="tags"><span>Ctrl+R</span></td>
+        <td>书签VIEW</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+      <tr class="a1">
+        <td class="tags"><span>Ctrl+L</span></td>
+        <td>recenter</td>
+        <td>N</td>
+        <td>ZyL自定义快捷键</td>
+    </tr>
+ <tr class="a1">
+        <td class="tags"><span>Ctrl+M</span></td>
+        <td>编辑窗口最大化</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+    <tr class="a1">
+        <td class="tags"><span>Ctrl+Shift+G</span></td>
+        <td style="background:cyan">查找引用</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>
+	<tr class="a1">
+        <td class="tags"><span>Ctrl+K</span></td>
+        <td "background:cyan">快速查找选定的内容</td>
+        <td>N</td>
+        <td>N/A</td>
+    </tr>    
+    </tbody>
+</table>
+<div class="footer">
+    <small>Powered by WebStorm 8.0.1 2014年9月19日21:53:24 星期五</small>
+</div>
+</body>
+</html>

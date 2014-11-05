@@ -1,0 +1,68 @@
+body {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#content {
+    margin-top: 100px;
+}
+
+.head {
+    font-size: 50px;
+    font-family:cursive;
+    color: sienna;
+    margin-bottom: 50px;
+}
+
+.line {
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.line a:link {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+.line a:visited {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+
+.line a:hover {
+    color: red;
+    text-decoration: none;
+}
+
+#footer {
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.extras {
+    float: right;
+    margin-right: 20px;
+
+}
+
+.extras a:link {
+    color: hotpink;
+    text-decoration: none;
+}
+
+.extras a:visited {
+    color: hotpink;
+    text-decoration: none;
+}
+
+.extras a:hover {
+    color: red;
+    text-decoration: none;
+}
+fieldset
+{
+    display: inline;
+}

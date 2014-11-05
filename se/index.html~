@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>软件工程</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<h1>软件工程课程</h1>
+<small><a href="../index.html">&lt;&lt;主页</a></small>
+<hr>
+<ol>
+    <li><a href="semind.html">概要</a></li>
+    <li><a href="http://agilemanifesto.org/iso/zhchs/">敏捷开发宣言</a></li>
+    <li>
+        <a href="uml/uml.html">UML</a>
+    </li>
+</ol>
+<div id="footer"><small>
+    Powered by WebStorm 8.0.1 2014年9月19日16:26:33 星期五</small>
+</div>
+</body>
+</html>

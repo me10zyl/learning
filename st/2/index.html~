@@ -1,0 +1,81 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta content="text/css" http-equiv="Content-Style-Type">
+<title>软件测试</title>
+<style type="text/css">span.s1 {background-color: #FFFFFF; color: #FF0000}</style>
+</head>
+<body>
+<h1 align="center" class="root">
+<a name="5q19k9gape4ah4sef1hm2qrfod">软件测试</a>
+</h1>
+<div align="center" class="globalOverview">
+<img src="index_files/images/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95.jpg"></div>
+<h2 class="topic">
+<a name="3n90itlqcomvhjqmivmc4jifhs">术语</a>
+</h2>
+<h2 class="topic">
+<a name="33r055f4ofnha6puv8doebtat4">黑盒测试</a>
+</h2>
+<h3 class="topic">
+<a name="0sgda4i0h7dstte69d1r1a847l">&nbsp;等价类划分法</a>
+</h3>
+<h3 class="topic">
+<a name="55hprv17n3aln0oojio50nj42b">&nbsp;&nbsp;术语</a>
+</h3>
+<h3 class="topic">
+<a name="2dt17o18h7k6e12f174itm3r52">&nbsp;&nbsp;&nbsp;等价类</a>
+</h3>
+<h3 class="topic">
+<a name="7r8ov01kdd3u8hmd0pk0n0uaj9">&nbsp;&nbsp;&nbsp;&nbsp;等价类指测试对象将以相同方式来处理的一组数据值</a>
+</h3>
+<h3 class="topic">
+<a name="0qh9cf1fc67845nft69985jo5b">&nbsp;&nbsp;&nbsp;有效等价类</a>
+</h3>
+<h3 class="topic">
+<a name="1ko9r5n84fgrsvscmoa4c0v94q">&nbsp;&nbsp;&nbsp;&nbsp;根据软件规格说明书，有意义的输入</a>
+</h3>
+<h3 class="topic">
+<a name="3k914tp5crqqgjaccem5goq33e">&nbsp;&nbsp;&nbsp;无效等价类</a>
+</h3>
+<h3 class="topic">
+<a name="0qlqu3h6erai1tphj08sgddisg">&nbsp;&nbsp;&nbsp;&nbsp;根据软件规格说明书，无意义的输入</a>
+</h3>
+<h3 class="topic">
+<a name="33oo2bufja9g2nkfaggpku39qa">&nbsp;&nbsp;测试方法</a>
+</h3>
+<h3 class="topic">
+<a name="2sm56k9936d33ld3ff9s6grusi">&nbsp;&nbsp;&nbsp;(1)划分并标识等价类</a>
+</h3>
+<div class="notesContainer">
+<p>标识所有输入,对每个输入进行等价类划分，形成等价类表，每一等价类规定一个唯一的编号；</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="4f00ctqour01b8062m5ah8aur8">&nbsp;&nbsp;&nbsp;(2)为有效等价类设计测试用例</a>
+</h3>
+<p class="labelsAndMarkers">
+<span class="label">正面测试用例</span>
+</p>
+<div class="notesContainer">
+<p>设计一测试用例，使其<span class="s1">尽可能多</span>地覆盖尚未覆盖的有效等价类，重复这一步骤，直到所有有效等价类均被测试用例所覆盖；</p>
+</div>
+<h3 class="topic">
+<a name="29hbd1cg2s2g3vpi5fum5i4a67">&nbsp;&nbsp;&nbsp;(3)为无效等价类设计测试用例</a>
+</h3>
+<p class="labelsAndMarkers">
+<span class="label">负面测试用例</span>
+</p>
+<div class="notesContainer">
+<p>设计一新测试用例，使其只覆盖<span class="s1">一个</span>无效等价类，重复这一步骤直到所有无效等价类均被覆盖；</p>
+<p></p>
+</div>
+<h3 class="topic">
+<a name="4b6q931ere80cic30s7huj3pqh">&nbsp;边界分析法</a>
+</h3>
+<h2 class="topic">
+<a name="0b1oa7irh5j9kahkd25fsruvc2">白盒测试</a>
+</h2>
+</body>
+</html>

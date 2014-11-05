@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>ER图</title>
+    <style>
+        body {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<h1 style="text-align: center">Database-ER图-数据库设计</h1>
+<small><a href="index.html">&lt;&lt;返回</a></small>
+<h1>概念模型 -> 物理模型</h1>
+
+<div>
+    <table>
+        <caption><b><font color="red"> 实体间关系的转换 总结</font></b></caption>
+        <thead>
+        <th>实体A，B间的关系
+        </th>
+        <th>
+        </th>
+        <th>表A，B间的关系实现
+        </th>
+        </thead>
+        <tbody>
+        <tr>
+            <td>1:1</td>
+            <td>→</td>
+            <td>
+                <ul>
+                    <li>将A表的主键放在B表中，并作为B表的外键。</li>
+                    <li>将B表的主键放在A表中，并作为A表的外键。</li>
+                    <li>到底如何做，视具体项目，具体情况而定(看利用率)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>1:m</td>
+            <td>→</td>
+            <td>将1端表的主键放在m端的表中，并作为m端表的外键</td>
+        </tr>
+        <tr>
+            <td>m:n</td>
+            <td>→</td>
+            <td>
+                <ul>
+                    <li>新建一个表(AB)来表示A,B实体间的关系。</li>
+                    <li>将A表的主键放在AB表中，并作为AB表的主键和外键</li>
+                    <li>将B表的主键放在AB表中，并作为AB表的主键和外键</li>
+                </ul>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <hr>
+    <img src="2/tu1.png">
+    <hr>
+    <img src="2/tu2.png">
+    <hr>
+    <img src="2/tu3.png">
+    <hr>
+</div>
+<div>
+    <a href="2/huitu1.vsd">
+        Download VSD
+    </a>
+</div>
+</body>
+</html>

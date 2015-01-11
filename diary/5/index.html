@@ -1,0 +1,52 @@
+"<html><head><meta charset="utf-8"/><link href='e:\markdown\markdown-css-themes-gh-pages\avenir-white.css' rel='stylesheet'></link></head><body>"  
+<h1>Oracle日志</h1>
+
+<h2>######2015年1月10日 16:59:53 </h2>
+
+<blockquote>
+  <ol>
+<li>今天学到了什么</li>
+<li>遇到的问题
+<h2>3. 怎么解决的</h2></li>
+</ol>
+</blockquote>
+
+<h4>今天学到了什么</h4>
+
+<ul>
+<li><code>java7</code>自动关闭连接
+<code>java
+Class.forname("jdbc");
+try(Connection con = DriverManager.getConnection( "jdbc:mysql://zyl-me.xicp.net:10000/graduationsystem", "root", ""))
+{
+...
+}catch(SQLException e)
+{
+...
+}
+</code></li>
+<li>构造函数的<code>访问修饰符</code>
+<code>
+构造函数`访问修饰符`与`类`的`访问修饰符`相同
+</code></li>
+<li>获得32位 <code>uuid</code>
+<code>
+public static String getId()
+{
+    UUID uuid = UUID.randomUUID();
+    return uuid.toString();
+}
+</code></li>
+</ul>
+
+<h4>遇到的问题&amp;怎么解决的</h4>
+
+<blockquote>
+  <ul>
+<li><strong>MYSQL Error Code: 1146. Table 'ask.ask<em>user' doesn't exist</strong> : 删除掉 drop index uq</em>email on ask_user;</li>
+<li><strong>MYSQL Error Code: 1215. Cannot add foreign key constraint</strong> : 外键是varchar(32),引用的主键是int,将int改回varchar(32)</li>
+<li><strong>JSTL 的添加 问题</strong> : 安装了MYECLIPSE 10, 添加了JSTL库</li>
+<li><strong>MYECLIPSE 10 内容助手不工作</strong> : 卸载掉了MyEclipse 10 安装了MyEclipse2015</li>
+</ul>
+</blockquote>
+"</body></html>"  

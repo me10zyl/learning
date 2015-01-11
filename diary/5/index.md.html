@@ -1,0 +1,80 @@
+﻿<!doctype html public '-//W3C//DTD HTML 4.0 Transitional //EN'>
+<html>
+<head>
+<title>index</title>
+<meta charset='UTF-8' />
+<meta name='generator' content='EverEdit' />
+<link href='E:\everedit\mode\markdown\default.css' rel='stylesheet'></link>
+<link href='E:\everedit\mode\markdown\prettify.css' rel='stylesheet'></link>
+<script type='text/javascript' src='E:\everedit\mode\markdown\prettify.js'></script>
+<script type='text/javascript' src='E:\everedit\mode\markdown\jquery-1.10.2.min.js'></script>
+<script type='text/javascript' src='E:\everedit\mode\markdown\toc.js'></script>
+</head>
+<body>
+<div id='generated-toc'></div>
+<h1>Oracle日志</h1>
+
+<h6>2015年1月10日 16:59:53</h6>
+
+<hr />
+
+<blockquote>
+  <ol>
+  <li>今天学到了什么</li>
+  <li>遇到的问题</li>
+  </ol>
+</blockquote>
+
+<h2>3. 怎么解决的</h2>
+
+<h4>今天学到了什么</h4>
+
+<ul>
+<li><code>java7</code>自动关闭连接</li>
+</ul>
+
+<pre><code class="java">Class.forname("jdbc");
+try(Connection con = DriverManager.getConnection( "jdbc:mysql://zyl-me.xicp.net:10000/graduationsystem", "root", ""))
+{
+    ...
+}catch(SQLException e)
+{
+    ...
+}</code></pre>
+
+<ul>
+<li>构造函数的<code>访问修饰符</code></li>
+</ul>
+
+<pre><code> 构造函数'访问修饰符'与'类'的'访问修饰符'相同</code></pre>
+
+<ul>
+<li>获得32位 <code>uuid</code></li>
+</ul>
+
+<pre><code>public static String getId()
+    {
+        UUID uuid = UUID.randomUUID();
+        return uuid.toString();
+    }  </code></pre>
+
+<h4>遇到的问题&amp;怎么解决的</h4>
+
+<blockquote>
+  <ul>
+  <li><strong>MYSQL Error Code: 1146. Table &#8216;ask.ask_user&#8217; doesn&#8217;t exist</strong> : 删除掉 drop index uq_email on ask_user;</li>
+  <li><strong>MYSQL Error Code: 1215. Cannot add foreign key constraint</strong> : 外键是varchar(32),引用的主键是int,将int改回varchar(32)</li>
+  <li><strong>JSTL 的添加 问题</strong> : 安装了MYECLIPSE 10, 添加了JSTL库</li>
+  <li><strong>MYECLIPSE 10 内容助手不工作</strong> : 卸载掉了MyEclipse 10 安装了MyEclipse2015</li>
+  </ul>
+</blockquote>
+<script type='text/javascript'>
+$(document).ready(function(){
+  if($('code').length>0){
+    $('code').parent().addClass('prettyprint linenums');
+    prettyPrint();
+};
+});
+</script>
+</body>
+</html>

@@ -46,7 +46,7 @@
 <fieldset style="float: left">
     <legend>ToolSet</legend>
     <ul>
-        <li><a href="tool/oRMappingTool/index.html">oRMappingTool</a></li>
+        <li><a href="zyl-me.xicp.net:1235/orm/">oRMappingTool</a></li>
         <li><a href="javascript:void(alert('即将到来...'))">Caster(Eclipse插件)</a></li>
     </ul>
 </fieldset>
